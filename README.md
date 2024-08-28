@@ -60,13 +60,19 @@ You can now access the service in your web browser by navigating to:
 http://localhost:8080
 ```
 
+![Interface](pics/simple-interface.png)
+
 ### 5. Upload a Document
 
 1. On the homepage, click "Choose File" and select a PDF document.
 2. Click "Upload" to store the document in the FAISS index.
+![Upload1](pics/upload1.png)
+![Upload2](pics/upload2.png)
 
 ### 6. Ask a Question
 
 1. Enter your question in the text area under "Ask a Question".
 2. Click "Ask" to submit your query. The service will retrieve the most relevant document and generate a response using OpenAI's API.
-the service, as well as additional information for development and deployment. Make sure to update the repository URL in the "Clone the Repository" section with your actual repository URL.
+
+![Question](pics/otazka1.png)
+![Question2](pics/otazka2.png)
