@@ -31,6 +31,8 @@ async def lifespan(app: FastAPI):
         retriever = EmbeddingRetriever(
             document_store=document_store,
             embedding_model="text-embedding-ada-002",
+            model_format="openai",
+            use_gpu=False,
             api_key=openai_api_key,
             max_seq_len=1024
         )
