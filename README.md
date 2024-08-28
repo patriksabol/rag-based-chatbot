@@ -30,7 +30,7 @@ Replace `your_openai_api_key_here` with your actual OpenAI API key.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/document-search-api.git
+git clone https://github.com/patriksabol/rag-based-chatbot.git
 cd document-search-api
 ```
 
@@ -47,7 +47,7 @@ docker build -t document-search-api .
 Once the Docker image is built, you can run the service using Docker:
 
 ```bash
-docker run -d -p 80:80 --env-file .env document-search-api
+docker run -d -p 8080:80 --env-file .env document-search-api
 ```
 
 This command runs the service in detached mode and maps port `80` on your local machine to port `80` in the container.
@@ -57,7 +57,7 @@ This command runs the service in detached mode and maps port `80` on your local 
 You can now access the service in your web browser by navigating to:
 
 ```
-http://localhost
+http://localhost:8080
 ```
 
 ### 5. Upload a Document
@@ -69,49 +69,4 @@ http://localhost
 
 1. Enter your question in the text area under "Ask a Question".
 2. Click "Ask" to submit your query. The service will retrieve the most relevant document and generate a response using OpenAI's API.
-
-## Development and Debugging
-
-### Running Locally
-
-If you want to run the FastAPI app directly on your local machine without Docker, follow these steps:
-
-1. Create and activate a virtual environment:
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-
-2. Install dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Run the FastAPI application:
-
-    ```bash
-    uvicorn app:app --host 0.0.0.0 --port 8000
-    ```
-
-4. Access the service at `http://localhost:8000`.
-
-### Testing
-
-You can use tools like Postman or cURL to test the API endpoints manually.
-
-## Deployment
-
-For production deployment, you can use Docker or any cloud service that supports Docker containers, such as AWS, Azure, or Google Cloud.
-
-## Notes
-
-- Ensure that you set your OpenAI API key in the `.env` file or as an environment variable in your deployment environment.
-- Modify the `Dockerfile` if additional dependencies are required.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
-.md` provides comprehensive instructions for building, running, and accessing the service, as well as additional information for development and deployment. Make sure to update the repository URL in the "Clone the Repository" section with your actual repository URL.
+the service, as well as additional information for development and deployment. Make sure to update the repository URL in the "Clone the Repository" section with your actual repository URL.
